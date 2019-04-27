@@ -45,7 +45,7 @@ create table ordine (
 
 
 -- Prodotti associati ad un fornitore
-create table prodotti (
+create table prodotto (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT Primary key,
     nome varchar(255) NOT NULL,
     descrizione text,

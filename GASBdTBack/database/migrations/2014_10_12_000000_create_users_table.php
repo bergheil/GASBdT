@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('cf', 18)->nullable();
             $table->string('telefono', 50)->nullable();
             $table->enum('ruolo', ['admin','coordinatore','referente', 'socio', 'fornitore'])->default('socio');
-
+            
             $table->rememberToken();
             $table->timestamps();
         });

@@ -7,7 +7,7 @@ Ogni contributo in termini di tempo di un socio, nello svolgere le attività del
 
 ## Tecnologie usate
 Il progetto è separato dalla parte Front-End realizzata in Angular 7, quindi una Single Page application e 
-una parte di Back-End realizzata in PHP su framework Laravel
+una parte di Back-End realizzata in PHP su framework Laravel. Il database è su MySql.
 
 
 ## License
