@@ -17,7 +17,8 @@ class SeedUtenti extends Seeder
                 'email' => 'francesco.diperna@gmail.com',
                 'password' => 'bergheil',
                 'ruolo' => 'admin',
-                'localita' => 'Bellante'
+                'localita' => 'Bellante',
+                'telefono' => '3884736099'
             )
         );
         
@@ -66,7 +67,7 @@ class SeedUtenti extends Seeder
                 'nominativo' => 'Bazzani Maria',
                 'email' => 'maria.bazzani@gmail.com',
                 'password' => 'bazzani',
-                'ruolo' => 'referente',
+                'ruolo' => 'socio',
                 'localita' => 'Bellante'
             )
         );
@@ -78,6 +79,16 @@ class SeedUtenti extends Seeder
                 'password' => 'villonio',
                 'ruolo' => 'referente',
                 'localita' => 'Bellante'
+            )
+        );
+
+        DB::table('users')->insert(
+            array(
+                'nominativo' => 'Riggio Michele',
+                'email' => 'info@riggioarance.it',
+                'password' => 'riggio',
+                'ruolo' => 'fornitore',
+                'localita' => 'Catania'
             )
         );
     }

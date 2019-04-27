@@ -51,6 +51,16 @@ create table prodotti (
     descrizione text,
     quantita float,
     unita_di_misura ENUM('pezzi', 'gr', 'kg', 'ml', 'lt'),
+    prezzo double,
     fornitore_id bigint unsigned not null,
     FOREIGN KEY (fornitore_id) REFERENCES utente(id)
+)
+
+-- Associazione tra ordini e prodotti
+create table ordine_prodotti (
+    ordine_id  bigint unsigned not null,
+    prodotto_id  bigint unsigned not null,
+    prezzo double,
+    FOREIGN KEY (ordine_id) REFERENCES ordine(id),
+    FOREIGN KEY (prodotto_id) REFERENCES prodotto(id)
 )

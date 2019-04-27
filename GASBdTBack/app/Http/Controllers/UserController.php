@@ -12,6 +12,18 @@ class UserController extends Controller
         return User::all();
     }
 
+    public function elencoFornitori()
+    {        
+        return User::where('ruolo', '=', 'fornitore')
+            ->get();
+    }
+
+    public function elencoSoci()
+    {        
+        return User::where('ruolo', '!=', 'fornitore')
+            ->get();
+    }
+
     public function show($id)
     {
         return User::find($id);
@@ -24,16 +36,16 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $article = User::findOrFail($id);
-        $article->update($request->all());
+        $utente = User::findOrFail($id);
+        $utente->update($request->all());
 
-        return $article;
+        return $utente;
     }
 
     public function delete(Request $request, $id)
     {
-        $article = User::findOrFail($id);
-        $article->delete();
+        $utente = User::findOrFail($id);
+        $utente->delete();
 
         return 204;
     }
